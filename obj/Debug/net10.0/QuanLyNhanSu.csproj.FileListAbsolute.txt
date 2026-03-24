@@ -13,3 +13,6 @@ D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\refint\QuanLyNhanSu.dll
 D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.pdb
 D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.genruntimeconfig.cache
 D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\ref\QuanLyNhanSu.dll
+D:\WorkSpaces\C\QuanLyNhanSu\bin\Debug\net10.0\Newtonsoft.Json.dll
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.csproj.AssemblyReference.cache
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNh.83172EC3.Up2Date

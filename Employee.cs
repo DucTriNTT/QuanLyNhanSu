@@ -1,3 +1,5 @@
+using System;
+
 namespace QuanLyNhanSu
 {
     public class Employee
@@ -17,7 +19,7 @@ namespace QuanLyNhanSu
 
         public override string ToString()
         {
-            return $"[{Id}] {Name} - {Position} - {Salary:N0} VNĐ";
+            return $"[{Id}] {Name,-20} | Chức vụ: {Position,-15} | Lương: {Salary:N0} VNĐ";
         }
     }
 }
