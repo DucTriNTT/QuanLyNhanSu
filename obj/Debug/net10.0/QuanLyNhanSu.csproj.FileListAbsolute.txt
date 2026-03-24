@@ -1,0 +1,15 @@
+D:\WorkSpaces\C\QuanLyNhanSu\bin\Debug\net10.0\QuanLyNhanSu.exe
+D:\WorkSpaces\C\QuanLyNhanSu\bin\Debug\net10.0\QuanLyNhanSu.deps.json
+D:\WorkSpaces\C\QuanLyNhanSu\bin\Debug\net10.0\QuanLyNhanSu.runtimeconfig.json
+D:\WorkSpaces\C\QuanLyNhanSu\bin\Debug\net10.0\QuanLyNhanSu.dll
+D:\WorkSpaces\C\QuanLyNhanSu\bin\Debug\net10.0\QuanLyNhanSu.pdb
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.AssemblyInfoInputs.cache
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.AssemblyInfo.cs
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.sourcelink.json
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.dll
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\refint\QuanLyNhanSu.dll
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.pdb
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\QuanLyNhanSu.genruntimeconfig.cache
+D:\WorkSpaces\C\QuanLyNhanSu\obj\Debug\net10.0\ref\QuanLyNhanSu.dll
