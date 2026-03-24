@@ -7,24 +7,25 @@ namespace QuanLyNhanSu
     {
         static void Main(string[] args)
         {
-            // Hỗ trợ gõ tiếng Việt có dấu trong Console
+            // Thiết lập font tiếng Việt cho Console
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
 
             EmployeeManager manager = new EmployeeManager();
             
-            // Tự động nạp dữ liệu cũ khi vừa mở app
+            // Tự động nạp lại dữ liệu cũ ngay khi mở app
             manager.LoadFromFile();
 
             bool exit = false;
             while (!exit)
             {
-                Console.WriteLine("\n========== QUẢN LÝ NHÂN SỰ ==========");
+                Console.WriteLine("\n========== HỆ THỐNG QUẢN LÝ NHÂN SỰ ==========");
                 Console.WriteLine("1. Xem danh sách nhân viên");
                 Console.WriteLine("2. Thêm nhân viên mới");
                 Console.WriteLine("3. Xóa nhân viên theo ID");
-                Console.WriteLine("4. Thoát");
-                Console.Write("Lựa chọn của bạn (1-4): ");
+                Console.WriteLine("4. Xuất báo cáo ra file (.txt)");
+                Console.WriteLine("5. Thoát chương trình");
+                Console.Write("Lựa chọn của bạn (1-5): ");
 
                 string choice = Console.ReadLine();
                 switch (choice)
@@ -34,27 +35,32 @@ namespace QuanLyNhanSu
                         break;
                     case "2":
                         try {
-                            Console.Write("Nhập ID: "); int id = int.Parse(Console.ReadLine());
+                            Console.Write("Nhập ID (số): "); int id = int.Parse(Console.ReadLine());
                             Console.Write("Nhập Họ Tên: "); string name = Console.ReadLine();
                             Console.Write("Nhập Chức Vụ: "); string pos = Console.ReadLine();
-                            Console.Write("Nhập Lương: "); double sal = double.Parse(Console.ReadLine());
+                            Console.Write("Nhập Lương (số): "); double sal = double.Parse(Console.ReadLine());
                             
                             manager.AddEmployee(new Employee(id, name, pos, sal));
                         } catch {
-                            Console.WriteLine("!! Lỗi: ID và Lương phải là số.");
+                            Console.WriteLine("!! Lỗi: ID và Lương phải nhập đúng định dạng số.");
                         }
                         break;
                     case "3":
-                        Console.Write("Nhập ID cần xóa: ");
+                        Console.Write("Nhập ID nhân viên cần xóa: ");
                         if (int.TryParse(Console.ReadLine(), out int delId))
                             manager.DeleteEmployee(delId);
+                        else
+                            Console.WriteLine("!! Lỗi: ID phải là số.");
                         break;
                     case "4":
+                        manager.ExportToText();
+                        break;
+                    case "5":
                         exit = true;
-                        Console.WriteLine("Cảm ơn bạn đã sử dụng phần mềm!");
+                        Console.WriteLine("Đang thoát... Tạm biệt!");
                         break;
                     default:
-                        Console.WriteLine("Lựa chọn không hợp lệ!");
+                        Console.WriteLine("!! Lựa chọn không hợp lệ, vui lòng chọn từ 1 đến 5.");
                         break;
                 }
             }
