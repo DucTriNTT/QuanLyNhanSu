@@ -97,10 +97,20 @@ namespace QuanLyNhanSu
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide(); 
+            this.Hide();
             frmLogin f = new frmLogin();
             f.ShowDialog();
             this.Close();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,7 +46,7 @@
             toolStripButton5 = new ToolStripButton();
             toolStripButton6 = new ToolStripButton();
             groupBox1 = new GroupBox();
-            button1 = new Button();
+            btnSearch = new Button();
             txtMaNV = new TextBox();
             comboBox1 = new ComboBox();
             label4 = new Label();
@@ -83,14 +83,14 @@
             // quảnLýTàiKhoảnToolStripMenuItem
             // 
             quảnLýTàiKhoảnToolStripMenuItem.Name = "quảnLýTàiKhoảnToolStripMenuItem";
-            quảnLýTàiKhoảnToolStripMenuItem.Size = new Size(270, 34);
+            quảnLýTàiKhoảnToolStripMenuItem.Size = new Size(253, 34);
             quảnLýTàiKhoảnToolStripMenuItem.Text = "Quản lý tài khoản";
             quảnLýTàiKhoảnToolStripMenuItem.Click += quảnLýTàiKhoảnToolStripMenuItem_Click;
             // 
             // đăngXuấtToolStripMenuItem
             // 
             đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            đăngXuấtToolStripMenuItem.Size = new Size(270, 34);
+            đăngXuấtToolStripMenuItem.Size = new Size(253, 34);
             đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             đăngXuấtToolStripMenuItem.Click += đăngXuấtToolStripMenuItem_Click;
             // 
@@ -135,6 +135,7 @@
             toolStrip1.Size = new Size(1249, 34);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // toolStripButton1
             // 
@@ -191,7 +192,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnSearch);
             groupBox1.Controls.Add(txtMaNV);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(label4);
@@ -207,20 +208,21 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Tìm Kiếm";
+            groupBox1.Enter += groupBox1_Enter;
             // 
-            // button1
+            // btnSearch
             // 
-            button1.BackColor = SystemColors.ActiveBorder;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(1058, 130);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 40);
-            button1.TabIndex = 3;
-            button1.Text = "Tìm Kiếm";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnSearch.BackColor = SystemColors.ActiveBorder;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSearch.ImageAlign = ContentAlignment.MiddleRight;
+            btnSearch.Location = new Point(1058, 130);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(150, 40);
+            btnSearch.TabIndex = 3;
+            btnSearch.Text = "Tìm Kiếm";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += button1_Click;
             // 
             // txtMaNV
             // 
@@ -368,7 +370,7 @@
         private TextBox txtHoTen;
         private TextBox txtMaNV;
         private ComboBox comboBox1;
-        private Button button1;
+        private Button btnSearch;
         private Label label5;
         private DataGridView dataGridView1;
         private ToolStripMenuItem quảnLýTàiKhoảnToolStripMenuItem;

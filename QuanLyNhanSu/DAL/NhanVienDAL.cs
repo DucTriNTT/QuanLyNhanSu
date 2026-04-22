@@ -51,5 +51,22 @@ namespace QuanLyNhanSu.DAL
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+
+        public DataTable TimKiemNhanVien(string keyword)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                // Tìm theo Mã hoặc Họ tên
+                string sql = "SELECT * FROM NhanVien WHERE MaNV LIKE @key OR HoTen LIKE @key";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@key", "%" + keyword + "%"); // Dấu % để tìm kiếm chứa ký tự đó
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
     }
     }

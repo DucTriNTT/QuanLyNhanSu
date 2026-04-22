@@ -28,6 +28,11 @@ namespace QuanLyNhanSu.BUS
             return dal.UpdateNhanVien(nv);
         }
 
+        public DataTable TimKiem(string keyword)
+        {
+            return dal.TimKiemNhanVien(keyword);
+        }
+
         internal bool ThemNhanVien(NhanVienDTO nv)
         {
             throw new NotImplementedException();
