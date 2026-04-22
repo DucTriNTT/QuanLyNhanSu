@@ -1,4 +1,4 @@
-namespace QuanLyNhanSu_
+namespace QuanLyNhanSu
 {
     internal static class Program
     {
@@ -12,6 +12,17 @@ namespace QuanLyNhanSu_
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            frmLogin login = new frmLogin();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Form1());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
